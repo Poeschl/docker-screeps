@@ -1,5 +1,4 @@
 # Ignore everything
 *
 # except docker-relevant files
-/Dockerfile
-/entrypoint.sh
+! entrypoint.sh
