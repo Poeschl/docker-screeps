@@ -13,12 +13,22 @@ Its [screeps/screeps](https://github.com/screeps/screeps) packed inside a docker
 
 Start it up with docker:
 
-`docker run -p 21025:21025 -p 21026:21026 -v "$(pwd)/data:/screeps" poeschl/screeps`
+```sh
+docker run -p 21025:21025 -p 21026:21026 -v "$(pwd)/data:/screeps" poeschl/screeps
+```
 
 This will start the screeps server and let it initalize a new world in the mapped folder.
 If a world already exists, it won't be overriden.
 
 __Make sure to insert your steam key into `.screepsrc` inside the data folder after the first start.__
+
+### Custom commands
+
+In case you want to execute custom commands like `npx screeps init` you can do it like this:
+
+```sh
+docker run -p 21025:21025 -p 21026:21026 -v "$(pwd)/data:/screeps" poeschl/screeps npx screeps init
+```
 
 ## Docker-compose
 
